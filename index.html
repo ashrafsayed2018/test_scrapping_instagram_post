@@ -11,9 +11,9 @@
     <script>
         const username = 'cover.kuw_';
 
-        async function getInstagramPosts(username) {
+        async function getInstagramPosts() {
             try {
-                const response = await fetch(`https://www.instagram.com/${username}/?__a=1`);
+                const response = await fetch(`https://www.instagram.com/cover.kuw_/`);
                 const data = await response.json();
                 const posts = data.graphql.user.edge_owner_to_timeline_media.edges;
 
@@ -36,7 +36,7 @@
             }
         }
 
-        getInstagramPosts('cover.kuw_');
+        getInstagramPosts();
     </script>
 </body>
 </html>
